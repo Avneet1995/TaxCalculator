@@ -10,8 +10,11 @@ public class ItemDef {
 	System.out.println("Enter the item name: ");
 	String itemName=br.readLine();
 	
+	double itemCost=0;
+	try {
 	System.out.println("Enter the cost of the item: ");
-	double itemCost = Double.parseDouble(br.readLine());
+	itemCost = Double.parseDouble(br.readLine());
+	
 	
 	System.out.println("Enter item quantity: ");
 	int itemQuantity=Integer.parseInt(br.readLine());
@@ -49,8 +52,11 @@ public class ItemDef {
     	   break;
 	default : System.out.println("Invalid Option");
 	}
+	}catch(Exception e) {
+		System.out.println("Invalid input!");
+	}
+	}
 		
 	}
 	
-}
 
